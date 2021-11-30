@@ -7,13 +7,13 @@
     <title>Lista de usuarios</title>
 </head>
 <body>
-    
     <div class="container">
         <h2 class='text-center mt-5'>Lista de usuarios</h2>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Id</th>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Imagen</th>
                     <th scope="col">Usuario</th>
                     <th scope="col">Profesion</th>
                     <th scope="col">Genero</th>
@@ -21,21 +21,16 @@
                 </tr>
             </thead>
             <tbody>
+                {% for user in getUsuarios %}
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Marco Carrillo</td>
-                    <td>Ing. en software</td>
-                    <td>Masculino</td>
-                    <td>Durango</td>
+                    <th scope="row">{{user.id_user}}</th>
+                    <td><img src="{{user.photo.url}} " width="40" style='border-radius:50px;'></td>
+                    <td>{{user.nombre}}</td>
+                    <td>{{user.profesion}}</td>
+                    <td>{{user.genero}}</td>
+                    <td>{{user.ciudad}}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Osvaldo Lopez</td>
-                    <td>Ing. en software</td>
-                    <td>Masculino</td>
-                    <td>Durango</td>
-                </tr>
-                
+                {%endfor%}
             </tbody>
         </table>
     </div>
