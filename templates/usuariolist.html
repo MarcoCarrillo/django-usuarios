@@ -1,10 +1,44 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
     <title>Lista de usuarios</title>
 </head>
 <body>
-    <h1>Lista de users</h1>
+    
+    <div class="container">
+        <h2 class='text-center mt-5'>Lista de usuarios</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Profesion</th>
+                    <th scope="col">Genero</th>
+                    <th scope="col">Ciudad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Marco Carrillo</td>
+                    <td>Ing. en software</td>
+                    <td>Masculino</td>
+                    <td>Durango</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Osvaldo Lopez</td>
+                    <td>Ing. en software</td>
+                    <td>Masculino</td>
+                    <td>Durango</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    
 </body>
 </html>
